@@ -27,8 +27,8 @@ def makeResponse(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    city = 'London'
-    date = '2020-07-22'
+    city = "London"
+    date = "2020-07-22"
     
     if city is None:
         return None
