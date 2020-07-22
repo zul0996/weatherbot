@@ -28,7 +28,17 @@ def makeResponse(req):
     result = req.get("result")
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
-    date = parameters.get("date")
+    date1 = parameters.get("date")
+    
+    let date = ''
+		if (date1.substr(0,10)) {
+		date = date1.substr(0,10)
+		console.log('Date: ' + date)
+		} else { date = new Date().toJSON().substr(0,10)
+		console.log('Date: ' + date)
+		}
+
+
     if city is None:
         return None
     r=requests.get('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=06f070197b1f60e55231f8c46658d077')
