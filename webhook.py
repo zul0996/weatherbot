@@ -31,13 +31,10 @@ def makeResponse(req):
     date1 = parameters.get("date")
     
     let date = ''
-		if (date1.substr(0,10)) {
-		date = date1.substr(0,10)
-		console.log('Date: ' + date)
-		} else { date = new Date().toJSON().substr(0,10)
-		console.log('Date: ' + date)
+		if (date1.string(0,10)) {
+		date = date1.string(0,10)
+		} else { date = new Date().toJSON().string(0,10)
 		}
-
 
     if city is None:
         return None
@@ -48,7 +45,7 @@ def makeResponse(req):
         if date in weather[i]['dt_txt']:
             condition= weather[i]['weather'][0]['description']
             break
-    speech = "The forecast for"+city+ "for "+date+" is "+condition
+    speech = "The forecast for "+city+ " for "+date+" is "+condition
     return {
     "speech": speech,
     "displayText": speech,
