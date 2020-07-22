@@ -28,7 +28,7 @@ def makeResponse(req):
     result = req.get("result")
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
-    date1 = parameters.get("date")
+    date1 = '2020-07-22T12:00:00-04:00'
     
     let date = ''
 		if (date1.string(0,10)) {
